@@ -1,6 +1,6 @@
 🌍 Wanderplan – Smart Itinerary Generator ✈️
 
-Wanderplan is a frontend-only web app that generates a personalized, day-wise travel plan based on your destination, budget, and travel dates. Built using HTML, CSS, and vanilla JavaScript.
+Wanderplan is a frontend-only web app that generates a personalized, day-wise travel plan based on your destination, budget, and travel month. Built using HTML, CSS, and vanilla JavaScript.
 
 ⸻
 

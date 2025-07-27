@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanderPlan</title>
+    
+    <link rel="stylesheet" href="../styles/itinenary.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="itinerary-header">
+            
+            <h1 id="itinerary-title"></h1>
+            <p id="itinerary-subtitle"></p>
+            
+            <!-- This part is now safe from being overwritten -->
+            <div class="header-subline">
+                <p>Made with love by Wanderplan</p>
+                <img src="../images/icons/logo.png" alt="Wanderplan Logo" class="header-logo">
+            </div>
+        </div>
+
+        <!-- Image Slider Section -->
+        <div id="slider-container">
+            <div class="slider">
+                <!-- Images will be loaded here by JS -->
+            </div>
+            <button class="slider-btn prev">&lt;</button>
+            <button class="slider-btn next">&gt;</button>
+        </div>
+
+        <!-- Climate Information Section -->
+        <div id="climate-container">
+            <h3>Climate During Your Travel</h3>
+            <p id="climate-info">Loading climate data...</p>
+        </div>
+
+        <!-- Day-wise Itinerary Section -->
+        <div id="itinerary-details">
+            <!-- Day-by-day plan will be loaded here by JS -->
+        </div>
+    </div>
+
+<script src="../scripts/itinerary.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+
+html {
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 1rem; /* Use rem for scalable padding */
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  z-index: 0;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: var(--bg-img);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed; /* Optional: creates parallax effect */
+  opacity: 0.35;
+  z-index: -1;
+  background-color: #000; /* Fallback color */
+  
+  /* Mobile-first optimizations */
+  @media (max-width: 768px) {
+    background-attachment: scroll; /* Better for mobile performance */
+    background-position: top center; /* Often better for mobile */
+  }
+  
+  /* For very small screens */
+  @media (max-width: 480px) {
+    background-size: contain; /* Might work better for some mobile layouts */
+    background-position: top center;
+  }
+}
+
+/* Logo styling */
+.logo-container {
+  margin-top: 1.25rem; /* 20px */
+}
+
+.logo {
+  height: clamp(60px, 15vw, 80px); /* Fluid height: min 60px, scales with viewport width, max 80px */
+}
+
+/* Heading */
+#customize-heading {
+  margin-top: 1.125rem; /* 18px */
+  /* Fluid font size: min 1.75rem, scales with viewport width, max 2.2rem */
+  font-size: clamp(1.75rem, 6vw, 2.2rem);
+  color: #222;
+  text-align: center;
+  font-weight: bold;
+  padding: 0 1rem; /* Add padding for smaller screens */
+}
+
+/* Form styling */
+#customize-form {
+  background-color: #ffffff;
+  padding: clamp(1.5rem, 5vw, 2rem); /* Fluid padding */
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 500px;
+  margin-top: 2rem; /* Increased margin for better spacing */
+  position: relative;
+  z-index: 1;
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+select {
+  width: 100%;
+  padding: 0.75rem; /* 12px */
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9; /* Light background for inputs */
+}
+
+button[type="submit"] {
+  margin-top: 1.5rem; /* 24px */
+  width: 100%;
+  padding: 0.8rem; /* 13px */
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem; /* Slightly larger font */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Added transition */
+}
+
+button[type="submit"]:hover {
+  background-color: #005fa3;
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Remove extra br spacing */
+#customize-form br {
+  display: none;
+}
+
+@media (max-width: 400px) {
+  body {
+    padding: 0.5rem;
+  }
+  #customize-form {
+    width: 95%;
+  }
+}
+/* Background container - more reliable than ::before pseudo-element */
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  opacity: 0.35;
+}
+
+/* Responsive background image */
+.responsive-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Fallback if JavaScript fails */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000; /* Fallback color */
+  z-index: -2; /* Behind the dynamic image */
+}

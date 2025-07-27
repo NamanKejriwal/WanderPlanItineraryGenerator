@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wanderplan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+   
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="nav-left">
+        <img src="../images/icons/logo.png" alt="Wanderplan Logo"/>
+        <h1>Wanderplan</h1>
+    </div>
+    <div class="nav-right">
+        <button id="dark-mode-btn" onclick="darkMode();">Dark mode</button>
+        <a href="#destinations-container">Explore Destinations</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<!-- Hero Section with Image and Text -->
+<div class="hero">
+    <img src="../images/scenery.jpg" alt="Scenery Image" class="hero-image" />
+    <div class="text-overlay"><h1>Plan Your Next Adventure</h1></div>
+</div>
+
+
+<!-- Did You Know Slider -->
+<section class="did-you-know">
+    <div class="did-you-know-box">
+        <h2>Did you know</h2>
+        <div class="slider">
+            <button class="slide-btn" id="prev-slide">‹</button>
+             <p id="fact-box">Bali has the highest number of beach clubs</p>
+            <button class="slide-btn" id="next-slide">›</button>
+        </div>
+    </div>
+</section>
+
+
+<!-- Explore Destinations -->
+<section class="destinations-container" id="destinations-container">
+    <h2>Explore destinations</h2>
+    <div class="destinations">
+        <a href="html/customizing.html?destination=dubai" class="destination-card" id="dubai-btn">
+            <img src="../images/cards/dubai.jpg" alt="Dubai" />
+            <p>Dubai</p>
+        </a> 
+        <a href="html/customizing.html?destination=Jaipur" class="destination-card" id="Jaipur-btn">
+            <img src="../images/cards/rajasthan.jpg" alt="Jaipur" />
+            <p>Jaipur</p>
+        </a>
+        <a href="html/customizing.html?destination=manali" class="destination-card" id="Manali-btn">
+            <img src="../images/cards/manali.jpg" alt="Manali" />
+            <p>Manali</p>
+        </a>
+        <a href="html/customizing.html?destination=thailand" class="destination-card" id="Thailand-btn">
+            <img src="../images/cards/thailand.jpg" alt="Thailand" />
+            <p>thailand</p>
+        </a>
+        <a href="html/customizing.html?destination=greece" class="destination-card" id="Greece-btn">
+            <img src="../images/cards/greece.jpg" alt="Greece"  />
+            <p>Greece</p>
+        </a>
+        
+        <a href="html/customizing.html?destination=varanasi" class="destination-card" id="Varanasi-btn">
+            <img src="../images/cards/Varanasi.jpg" alt="Varanasi" />
+            <p>Varanasi</p>
+        </a>
+        
+        <a href="html/customizing.html?destination=munnar" class="destination-card" id="Munnar-btn">
+            <img src="../images/cards/munnar.jpg" alt="Munnar" />
+            <p>Munnar</p>
+        </a>
+        
+        <a href="html/customizing.html?destination=paris" class="destination-card" id="Paris-btn">
+            <img src="../images/cards/paris.jpg" alt="Paris" />
+            <p>Paris</p>
+        </a>
+    </div>
+</section>
+
+<!-- Contact / Footer Section -->
+<footer class="contact" id="contact">
+    <div class="footer-heading">
+        <h2>Contact Us</h2>
+    </div>
+    <div class="contact-content">
+        <div class="socials">
+            <p>Instagram: wanderplan.india</p>
+            <p>Twitter: wanderplan_india</p>
+        </div>
+        <div class="contact-info">
+            <p>For any queries, suggestions, or feedback, feel free to reach out to us!</p>
+            <p>Email: wanderplan@gmail.com</p>
+            <p>Phone: +91 9999999999</p>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>© All rights reserved by WanderPlan</p>
+    </div>
+</footer>
+<script src="/main.js" ></script>
+</body>

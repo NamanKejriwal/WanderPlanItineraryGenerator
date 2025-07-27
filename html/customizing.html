@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wanderplan</title>
+    <link rel="stylesheet" href="../styles/customizing.css">
+
+</head>
+<body>
+<!-- Add this at the top of your body -->
+<div class="background-container" id="dynamic-bg-container">
+  <!-- Image will be inserted here by JavaScript -->
+</div>
+
+    <div class="logo-container">
+        <img src="../images/icons/logo.png" alt="Company Logo" class="logo">
+    </div>
+    <h2 id="customize-heading">Customize Your Itinerary</h2>
+
+    <form id="customize-form">
+      
+      
+        <!-- Month of Travel -->
+      <label for="month">Month of Travel:</label>
+      <select id="month" name="month" required>
+        <option value="">--Select Month--</option>
+        <option value="January">January</option>
+        <option value="February">February</option>
+        <option value="March">March</option>
+        <option value="April">April</option>
+        <option value="May">May</option>
+        <option value="June">June</option>
+        <option value="July">July</option>
+        <option value="August">August</option>
+        <option value="September">September</option>
+        <option value="October">October</option>
+        <option value="November">November</option>
+        <option value="December">December</option>
+      </select><br><br>
+    
+      <!-- Budget Range -->
+      <label for="budget">Budget Range:</label>
+      <select id="budget" name="budget" required>
+        <option value="">--Select Budget--</option>
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select><br><br>
+    
+      <!-- Duration of Stay -->
+      <label for="duration">Trip Duration:</label>
+      <select id="duration" name="duration" required>
+        <option value="">--Select Duration--</option>
+        <option value="3">3 Days</option>
+        <option value="5">5 Days</option>
+        <option value="7">7 Days</option>
+      
+      </select><br><br>
+
+
+        <!-- Activity Type -->
+       <label for="activity-type">What type of activities do you prefer?</label>
+        <select id="activity-type" name="activity-type" required>
+        <option value="">--Select--</option>
+        <option value="Adventure">Adventure & Nightlife</option>
+        <option value="Sightseeing">Sightseeing, Culture and History</option>
+        </select><br><br>
+
+    
+      <button type="submit">Generate Itinerary</button>
+    </form>
+    
+    <script src="../scripts/customizing.js" ></script>
+</body>
+</html>
